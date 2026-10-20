@@ -1,0 +1,3 @@
+
+Name: Manisha
+Skills: Python, SQL, Git, HTML, CSS
