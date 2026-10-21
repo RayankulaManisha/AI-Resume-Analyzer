@@ -1,3 +1,0 @@
-
-Job Role: Python Developer
-Required Skills: Python, SQL, Git, REST APIs, Docker
