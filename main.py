@@ -1,12 +1,21 @@
 
-with open("sample_resume.txt", "r") as file:
-    resume_text = file.read()
+import pdfplumber
+from pathlib import Path
 
-with open("job_description.txt", "r") as file:
-    job_text = file.read()
+# Find the project folder
+project_folder = Path(__file__).parent
 
-print("===== RESUME CONTENT =====")
+# Locate your resume PDF
+pdf_path = "sample_resume.pdf"
+
+# Read the PDF
+with pdfplumber.open(pdf_path) as pdf:
+    resume_text = ""
+
+    for page in pdf.pages:
+        page_text = page.extract_text() or ""
+        resume_text += page_text + "\n"
+
+# Display the extracted text
+print("===== RESUME TEXT =====")
 print(resume_text)
-
-print("\n===== JOB DESCRIPTION =====")
-print(job_text)
