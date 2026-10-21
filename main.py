@@ -6,8 +6,7 @@ from pathlib import Path
 project_folder = Path(__file__).parent
 
 # Locate your resume PDF
-pdf_path = "C:\Users\rayan\OneDrive\Desktop\AI-Resume-Analyzer\sample_resume.pdf.pdf"
-
+pdf_path = pdf_path = "C:\Users\rayan\OneDrive\Desktop\AI-Resume-Analyzer\sample_resume.pdf"
 # Read the PDF
 with pdfplumber.open(pdf_path) as pdf:
     resume_text = ""
